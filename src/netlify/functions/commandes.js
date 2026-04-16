@@ -5,7 +5,7 @@ exports.handler = async function (event) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            content: `Nouvelle commande !\n**Nom :** ${nom}\n**Produit :** ${produit}`
+            content: `Nouvelle commande !\n**Nom :** ${nom}\n**Produit :** ${produit} \n-------------------------------------\n`
         })
     })
 
