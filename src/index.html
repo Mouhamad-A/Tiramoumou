@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="flex justify-center p-4">
+            <img id="logo" class="w-55 h-auto md:w-60 h-auto rounded-3xl shadow-xl/30" src="./assets/img/Logo.png"
+                alt="Logo">
+        </nav>
+
+        <div class="flex items-center w-full my-5">
+            <div class="flex-1 h-px bg-gradient-to-r from-transparent to-[#b8966a]"></div>
+            <div class="flex items-center gap-2.5 px-4 text-[#d4b483]">
+                <span class="text-xs">✦</span>
+                <span class="text-xs">✦</span>
+                <span class="text-base">✦</span>
+                <span class="text-xs">✦</span>
+                <span class="text-xs">✦</span>
+            </div>
+            <div class="flex-1 h-px bg-gradient-to-l from-transparent to-[#b8966a]"></div>
+        </div>
+
+        <h1 id="titre" class="text-center font-['Italia'] md:text-4xl text-3xl font-medium ">La vérité c'est trop bon
+        </h1>
+        <p id="titre2" class="text-center font-['Playfair'] text-gray-400 text-15 my-3.5">Fait maison · Artisanal · Lyon
+        </p>
+        <div class="flex items-center w-full my-5">
+            <div class="flex-1 h-px bg-gradient-to-r from-transparent to-[#b8966a]"></div>
+            <div class="flex items-center gap-2.5 px-4 text-[#d4b483]">
+                <span class="text-xs">✦</span>
+                <span class="text-xs">✦</span>
+                <span class="text-base">✦</span>
+                <span class="text-xs">✦</span>
+                <span class="text-xs">✦</span>
+            </div>
+            <div class="flex-1 h-px bg-gradient-to-l from-transparent to-[#b8966a]"></div>
+        </div>
+        <h1 class="font-serif text-3xl font-light text-espresso italic text-center mb-15 mt-15">Nos Produits :</h1>
+
+    </header>
+
+    <!-- IMAGES PRODUIT -->
+    <main class=" flex justify-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 md:gap-30 gap-30 mb-15  ">
+            <div
+                class="w-80 h-105 bg-orange-100 rounded-xl border border-black transition duration-300 hover:-translate-y-2">
+                <!-- Conteneur image -->
+                <div class="relative group">
+
+                    <!-- Image principale -->
+                    <img class="w-full h-72 object-cover rounded-xl" src="./assets/img/Framboise.png" alt="">
+
+                    <!-- Image hover -->
+                    <img class="absolute inset-0 w-full h-72 object-cover rounded-xl opacity-0 group-hover:opacity-100 transition duration-300"
+                        src="./assets/img/Ingredient_F.png" alt="">
+
+                </div>
+                <h2 class="text-xl font-extralight text-center mt-3.5">Tiramisu Framboise/coco </h2>
+                <p class="text-2xl font-semibold text-center text-red-400">2 €</p>
+                <div class="flex justify-center">
+                    <button id="btn1" onclick="document.getElementById('popup-framboise').classList.remove('hidden')"
+                        class="p-1 px-10.5 bg-amber-700 text-white border-2 text-center border-amber-900 rounded-xl mt-3.5 hover:bg-amber-500 cursor-pointer">Réserver</button>
+                </div>
+            </div>
+            <div
+                class="w-80 h-105 bg-orange-100 rounded-xl border border-black transition duration-300 hover:-translate-y-2">
+                <div class="relative group">
+
+                    <!-- Badge Best Seller positionné en haut à gauche -->
+                    <img class="absolute bottom-52 right-50 md:bottom-46 md:right-47 w-40 md:w-53 h-auto z-10"
+                        src="./assets/img/Best_seller.png" alt="Best Seller">
+
+                    <!-- Image principale -->
+                    <img class="w-full h-72 object-cover rounded-xl" src="./assets/img/Brownie.png" alt="">
+
+                    <!-- Image hover -->
+                    <img class="absolute inset-0 w-full h-72 object-cover rounded-xl opacity-0 group-hover:opacity-100 transition duration-300"
+                        src="./assets/img/Ingredient_B.png" alt="">
+
+                </div>
+                <h2 class="text-xl font-extralight text-center mt-3.5">Tiramisu Brownie/Biscuit beurre</h2>
+                <p class="text-2xl font-semibold text-center text-red-400">2 €</p>
+                <div class="flex justify-center">
+                    <button id="btn2" onclick="document.getElementById('popup-brownie').classList.remove('hidden')"
+                        class="p-1 px-10.5 bg-amber-700 text-white border-2 text-center border-amber-900 rounded-xl hover:bg-amber-500 mt-3.5 cursor-pointer">Réserver</button>
+                </div>
+            </div>
+
+            <div
+                class="w-80 h-105 bg-orange-100 rounded-xl border border-black transition duration-300 hover:-translate-y-2">
+                <div class="relative group">
+
+                    <!-- Badge Best Seller positionné en haut à gauche -->
+                    <img class="absolute bottom-67 right-70 md:bottom-65 md:right-70 w-15 md:w-18 h-auto z-10"
+                        src="./assets/img/New2.png" alt="New">
+
+                    <!-- Image principale -->
+                    <img class="w-full h-72 object-cover rounded-xl" src="./assets/img/Gaufre.png" alt="">
+
+                    <!-- Image hover -->
+                    <img class="absolute inset-0 w-full h-72 object-cover rounded-xl opacity-0 group-hover:opacity-100 transition duration-300"
+                        src="./assets/img/Ingredient_G.png" alt="">
+
+                </div>
+                <h2 class="text-xl font-extralight text-center mt-3.5">Tiramisu Gaufre liegeoise / Crunch </h2>
+                <p class="text-2xl font-semibold text-center text-red-400">2 €</p>
+                <div class="flex justify-center">
+                    <button id="btn2" onclick="document.getElementById('popup-Gaufre').classList.remove('hidden')"
+                        class="p-1 px-10.5 bg-amber-700 text-white border-2 text-center border-amber-900 rounded-xl hover:bg-amber-500 mt-3.5 cursor-pointer">Réserver</button>
+                </div>
+            </div>
+
+
+
+            <div
+                class="w-80 h-105 bg-orange-100 rounded-xl border border-black transition duration-300 hover:-translate-y-2">
+                <div class="relative group">
+
+                    <!-- Badge Best Seller positionné en haut à gauche -->
+                    <img class="absolute bottom-67 right-70 md:bottom-65 md:right-70 w-15 md:w-18 h-auto z-10"
+                        src="./assets/img/New2.png" alt="New">
+
+                    <!-- Image principale -->
+                    <img class="w-full h-72 object-cover rounded-xl" src="./assets/img/Citron.png" alt="">
+
+                    <!-- Image hover -->
+                    <img class="absolute inset-0 w-full h-72 object-cover rounded-xl opacity-0 group-hover:opacity-100 transition duration-300"
+                        src="./assets/img/Ingredient_C.png" alt="">
+
+                </div>
+                <h2 class="text-xl font-extralight text-center mt-3.5">Tiramisu Sablé citron / Crunch blanc</h2>
+                <p class="text-2xl font-semibold text-center text-red-400">2 €</p>
+                <div class="flex justify-center">
+                    <button id="btn2" onclick="document.getElementById('popup-Citron').classList.remove('hidden')"
+                        class="p-1 px-10.5 bg-amber-700 text-white border-2 text-center border-amber-900 rounded-xl hover:bg-amber-500 mt-3.5 cursor-pointer">Réserver</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Popup FRAMBOISE-->
+    <div id="popup-framboise" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-xl p-8 w-80">
+
+            <h2 class="text-lg font-serif text-amber-900 mb-1">Votre commande</h2>
+            <p class="text-xs text-amber-700 tracking-widest uppercase mb-6">Tiramisu Framboise/coco</p>
+
+            <form id="form-framboise"
+                onsubmit="envoyerCommande(event, 'Tiramisu Framboise/coco', 'nom-framboise', 'popup-framboise')">
+                <label class="text-xs text-amber-800 uppercase tracking-widest">Votre nom</label>
+                <input type="text" id="nom-framboise" required
+                    class="w-full mt-1 mb-6 border-b border-amber-300 outline-none py-1 text-sm text-amber-900">
+                <div class="flex gap-3">
+                    <button id="btn3" type="button"
+                        onclick="document.getElementById('popup-framboise').classList.add('hidden')"
+                        class="flex-1 py-2 border border-amber-200 text-amber-400 text-xs rounded cursor-pointer">Annuler</button>
+                    <button id="btn4" type="submit"
+                        class="flex-1 py-2 bg-amber-800 text-white text-xs rounded cursor-pointer">Valider</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Popup Brownie -->
+    <div id="popup-brownie" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-xl p-8 w-80">
+
+            <h2 class="text-lg font-serif text-amber-900 mb-1">Votre commande</h2>
+            <p class="text-xs text-amber-700 tracking-widest uppercase mb-6">Tiramisu Brownie/Biscuit beurre</p>
+
+            <form id="form-brownie"
+                onsubmit="envoyerCommande(event, 'Tiramisu Brownie/Biscuit beurre', 'nom-brownie', 'popup-brownie')">
+                <label class="text-xs text-amber-800 uppercase tracking-widest">Votre nom</label>
+                <input type="text" id="nom-brownie" required
+                    class="w-full mt-1 mb-6 border-b border-amber-300 outline-none py-1 text-sm text-amber-900">
+                <div class="flex gap-3">
+                    <button id="btn5" type="button"
+                        onclick="document.getElementById('popup-brownie').classList.add('hidden')"
+                        class="flex-1 py-2 border border-amber-200 text-amber-400 text-xs rounded cursor-pointer">Annuler</button>
+                    <button id="btn6" type="submit"
+                        class="flex-1 py-2 bg-amber-800 text-white text-xs rounded cursor-pointer">Valider</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <!-- Popup Gaufre -->
+    <div id="popup-Gaufre" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-xl p-8 w-80">
+
+            <h2 class="text-lg font-serif text-amber-900 mb-1">Votre commande</h2>
+            <p class="text-xs text-amber-700 tracking-widest uppercase mb-6">Tiramisu Gaufre liegeoise/Crunch </p>
+
+            <form id="form-gaufre"
+                onsubmit="envoyerCommande(event, 'Tiramisu Gaufre liegeoise/Crunch', 'nom-gaufre', 'popup-Gaufre')">
+                <label class="text-xs text-amber-800 uppercase tracking-widest">Votre nom</label>
+                <input type="text" id="nom-gaufre" required
+                    class="w-full mt-1 mb-6 border-b border-amber-300 outline-none py-1 text-sm text-amber-900">
+                <div class="flex gap-3">
+                    <button id="btn7" type="button"
+                        onclick="document.getElementById('popup-Gaufre').classList.add('hidden')"
+                        class="flex-1 py-2 border border-amber-200 text-amber-400 text-xs rounded cursor-pointer">Annuler</button>
+                    <button id="btn8" type="submit"
+                        class="flex-1 py-2 bg-amber-800 text-white text-xs rounded cursor-pointer">Valider</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <!-- Popup Citron -->
+    <div id="popup-Citron" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-xl p-8 w-80">
+
+            <h2 class="text-lg font-serif text-amber-900 mb-1">Votre commande</h2>
+            <p class="text-xs text-amber-700 tracking-widest uppercase mb-6">Tiramisu Sablé citron/Crunch blanc</p>
+
+            <form id="form-citron"
+                onsubmit="envoyerCommande(event, 'Tiramisu Sablé citron/Crunch blanc', 'nom-citron', 'popup-Citron')">
+                <label class="text-xs text-amber-800 uppercase tracking-widest">Votre nom</label>
+                <input type="text" id="nom-citron" required
+                    class="w-full mt-1 mb-6 border-b border-amber-300 outline-none py-1 text-sm text-amber-900">
+                <div class="flex gap-3">
+                    <button id="btn9" type="button"
+                        onclick="document.getElementById('popup-Citron').classList.add('hidden')"
+                        class="flex-1 py-2 border border-amber-200 text-amber-400 text-xs rounded cursor-pointer">Annuler</button>
+                    <button id="btn10" type="submit"
+                        class="flex-1 py-2 bg-amber-800 text-white text-xs rounded cursor-pointer">Valider</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <script>
+
+        async function envoyerCommande(event, produit, inputId, popupId) {
+            event.preventDefault()
+            const nom = document.getElementById(inputId).value
+
+            await fetch('/.netlify/functions/commandes', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nom, produit })
+            })
+
+            document.getElementById(popupId).classList.add('hidden')
+            alert('Commande envoyée !')
+        }
+
+        const text = new SplitType('#titre', { types: 'chars' })
+
+        gsap.from(text.chars, {
+            opacity: 0,
+            y: 20,
+            stagger: 0.04,
+            duration: 1.5,
+            ease: 'power3.out'
+        })
+
+        const text2 = new SplitType('#titre2', { types: 'chars' })
+
+        gsap.from(text2.chars, {
+            opacity: 0,
+            y: 20,
+            stagger: 0.04,
+            duration: 2.6,
+            ease: 'power3.out'
+        })
+
+        gsap.from('#logo', {
+            opacity: 0,
+            scale: 0.95,
+            duration: 2.5,
+            ease: 'circ'
+
+        })
+
+
+        document.querySelectorAll("#btn1, #btn2, #btn3, #btn4, #btn5, #btn6, #btn7, #btn8, #btn9, #btn10").forEach(btn => {
+            btn.addEventListener("mouseenter", () => gsap.to(btn, { scale: 1.05, duration: 0.2 }))
+            btn.addEventListener("mouseleave", () => gsap.to(btn, { scale: 1, duration: 0.2 }))
+        })
+
+
+    </script>
+</body>
+
+</html>
